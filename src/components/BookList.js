@@ -1,5 +1,6 @@
 import React from "react";
 import { books } from "../data";
+import StarRating from "./StarRating";
 
 const BookList = () => {
   return (
@@ -10,7 +11,7 @@ const BookList = () => {
 
     <div className="section-center featured-center">
       {books.map((book, index) => {
-        const {id, img, title, text, price} = book
+        const {id, img, title, text, price, rating} = book
         return (
         <article key={id} className="book-card">
           <div className="book-img-container">
@@ -23,6 +24,7 @@ const BookList = () => {
             </div>
             <p>{text}</p>
             <div className="book-footer">
+              <StarRating rating={rating}/>
               <p>${price}</p>
             </div>
           </div>

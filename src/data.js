@@ -114,34 +114,39 @@ export const pageLinks = [
       img: "https://images-fe.ssl-images-amazon.com/images/I/81jS0ENjenL._AC_UL600_SR600,400_.jpg",
       title: "Barefoot Kids",
       text: "The new #1 bestseller from the Barefoot",
-      price: "19.00"
+      price: "19.00",
+      rating: 5
     },
     {
       id: 2,
       img: "https://images-fe.ssl-images-amazon.com/images/I/618lIfMrw-L._AC_UL600_SR600,400_.jpg",
       title: "Moon Rising",
       text: "The Graphic Novel (Wings of Fire, Book Six)",
-      price: "14.99"
+      price: "14.99",
+      rating: 4.5
     },
     {
       id: 3,
       img: "https://images-fe.ssl-images-amazon.com/images/I/71YGTNVYQAL._AC_UL600_SR600,400_.jpg",
       title: "No More Nappies",
       text: "A Potty-Training Book Board book",
-      price: "9.95"
+      price: "9.95",
+      rating: 4.75
     },
     {
       id: 4,
       img: "https://images-fe.ssl-images-amazon.com/images/I/71sREBV3LDL._AC_UL600_SR600,400_.jpg",
       title: "Bluey",
       text: "T4 Books in 1 Board book – Picture Book",
-      price: "6.00"
+      price: "6.00",
+      rating: 4.25
     },
     {
       id: 5,
       img: "https://images-fe.ssl-images-amazon.com/images/I/81vTRhCo4sL._AC_UL600_SR600,400_.jpg",
       title: "The Invisible String",
       text: "Paperback – Picture Book",
-      price: "11.99"
+      price: "11.99",
+      rating: 4.0
     },
   ]
