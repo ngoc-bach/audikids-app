@@ -572,11 +572,11 @@ Navbar
 }
 
 .star-rating .empty {
-  color: var(--clr-grey-4);
+  color: var(--clr-grey-7);
 }
 
 .star-rating .half {
-  color: var(--clr-grey-4);
-  background-color: black;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  color: var(--clr-primary-5);
+  /* background-color: black; */
+  /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
 }
