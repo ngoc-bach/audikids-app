@@ -28,7 +28,7 @@ const About = () => {
         From classic fairy tales to modern day adventures, we have a wide range of stories to cater to children of all ages.
         </p>
         {/* <a href="#about" className="btn">read more</a> */}
-        <Link to="/about" className="btn">read more</Link>
+        <Link to="/about_us" className="btn">read more</Link>
       </article>
     </div>
   </section>

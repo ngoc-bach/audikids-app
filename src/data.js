@@ -103,5 +103,37 @@ export const pageLinks = [
       text: "Audible Audiobook – Unabridged",
       price: "10.99",
       rating: 4.0
-    }
+    },
+    {
+      id: 7,
+      img: "https://images-fe.ssl-images-amazon.com/images/I/91gO2A87g+L._AC_UL600_SR600,400_.jpg",
+      title: "Hogwarts Legacy",
+      text: "The Official Game Guide Paperback – 7 March 2023",
+      price: "18.70",
+      rating: 4.5
+    },
+    {
+      id: 8,
+      img: "https://images-fe.ssl-images-amazon.com/images/I/91ml6NFB4jL._AC_UL600_SR600,400_.jpg",
+      title: "Matilda",
+      text: "Narrated by Kate Winslet",
+      price: "10.99",
+      rating: 4.0
+    },
+    {
+      id: 9,
+      img: "https://images-fe.ssl-images-amazon.com/images/I/91drTBmtWzL._AC_UL600_SR600,400_.jpg",
+      title: "Charlie and the Chocolate Factory",
+      text: "Audible Audiobook – Unabridged",
+      price: "10.99",
+      rating: 4.0
+    },
+    {
+      id: 10,
+      img: "https://images-fe.ssl-images-amazon.com/images/I/91drTBmtWzL._AC_UL600_SR600,400_.jpg",
+      title: "That's Not My Koala",
+      text: "Hardcover – 1 January 2019",
+      price: "6.00",
+      rating: 5.0
+    },
   ]

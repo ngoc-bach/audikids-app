@@ -6,7 +6,8 @@ const Hero = () => {
     <div className="hero-banner">
       <h1>continue exploring</h1>
       <p>
-        Reading is better with Audi Kids, a reading app that have over 1,000 books only for children
+      "Say goodbye to boring bedtime stories and hello to a world of imagination and adventure,
+      all accessible through this innovative reading app."
       </p>
       <a href="#books" className="btn hero-btn">explore books</a>
     </div>

@@ -10,7 +10,7 @@ const FeaturedBooks = () => {
     </div>
 
     <div className="section-center featured-center">
-      {books.map((book, index) => {
+      {books.slice(0,6).map((book, index) => {
         const {id, img, title, text, price, rating} = book
         return (
         <article key={id} className="book-card">
