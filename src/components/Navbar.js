@@ -1,5 +1,6 @@
 import React from "react";
 import { pageLinks, socialLinks } from "../data";
+import {Link} from "react-router-dom";
 import logo from "../images/logo.svg";
 
 const Navbar = () => {
@@ -18,7 +19,7 @@ const Navbar = () => {
           const {id, href, text} = link
           return (
             <li key={id}>
-              <a href={href} className="nav-link"> {text} </a>
+              <Link to={href} className="nav-link" >{text}</Link>
             </li>
           )
         })}

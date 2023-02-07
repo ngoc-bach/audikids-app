@@ -1,27 +1,17 @@
-import img1 from "./images/tour-1.jpeg";
-import img2 from "./images/tour-2.jpeg";
-import img3 from "./images/tour-3.jpeg";
-import img4 from "./images/tour-4.jpeg";
-
 export const pageLinks = [
     {
       id: 1,
-      href: "#home",
+      href: "/",
       text: "home",
     },
     {
       id: 2,
-      href: "#about",
+      href: "/about_us",
       text: "about",
     },
     {
       id: 3,
-      href: "#services",
-      text: "services",
-    },
-    {
-      id: 4,
-      href: "#books",
+      href: "/books",
       text: "books",
     }
   ]
@@ -54,7 +44,7 @@ export const pageLinks = [
     {
       id: 2,
       icon: "fas fa-tree fa-fw",
-      title: "endless hiking",
+      title: "endless books",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officia"
     },
     {
@@ -62,49 +52,6 @@ export const pageLinks = [
       icon: "fas fa-socks fa-fw",
       title: "amazing comfort",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officia"
-    }
-  ]
-
-  export const tours = [
-    {
-      id: 1,
-      img: img1,
-      date: "august 26th, 2020",
-      title: "Tibet Adventure",
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumquevitae tempore voluptatum maxime reprehenderit eum quodexercitationem fugit, qui corporis.",
-      location: "china",
-      day: "6",
-      price: "2100"
-    },
-    {
-      id: 2,
-      img: img2,
-      date: "october 1th, 2020",
-      title: "best of java",
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumquevitae tempore voluptatum maxime reprehenderit eum quodexercitationem fugit, qui corporis.",
-      location: "indonesia",
-      day: "11",
-      price: "1400"
-    },
-    {
-      id: 3,
-      img: img3,
-      date: "september 15th, 2020",
-      title: "explore hong kong",
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumquevitae tempore voluptatum maxime reprehenderit eum quodexercitationem fugit, qui corporis.",
-      location: "hong kong",
-      day: "8",
-      price: "5000"
-    },
-    {
-      id: 4,
-      img: img4,
-      date: "december 5th, 2019",
-      title: "kenya highlights",
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumquevitae tempore voluptatum maxime reprehenderit eum quodexercitationem fugit, qui corporis.",
-      location: "kenya",
-      day: "20",
-      price: "3300"
     }
   ]
 
@@ -149,4 +96,12 @@ export const pageLinks = [
       price: "11.99",
       rating: 4.0
     },
+    {
+      id: 6,
+      img: "https://images-fe.ssl-images-amazon.com/images/I/91ml6NFB4jL._AC_UL600_SR600,400_.jpg",
+      title: "Matilda: Narrated by Kate Winslet",
+      text: "Audible Audiobook – Unabridged",
+      price: "10.99",
+      rating: 4.0
+    }
   ]

@@ -2,9 +2,9 @@ import React from "react";
 import { books } from "../data";
 import StarRating from "./StarRating";
 
-const BookList = () => {
+const FeaturedBooks = () => {
   return (
-    <section className="section" id="books">
+    <section className="section featuredbooks" id="books">
     <div className="section-title">
       <h2>featured <span>books</span></h2>
     </div>
@@ -36,4 +36,4 @@ const BookList = () => {
   )
 }
 
-export default BookList;
+export default FeaturedBooks;

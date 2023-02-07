@@ -8,7 +8,7 @@ const Hero = () => {
       <p>
         Reading is better with Audi Kids, a reading app that have over 1,000 books only for children
       </p>
-      <a href="#tours" className="btn hero-btn">explore books</a>
+      <a href="#books" className="btn hero-btn">explore books</a>
     </div>
   </section>
   )

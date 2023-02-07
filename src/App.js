@@ -1,22 +1,26 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import About from "./components/About";
-import BookList from "./components/BookList";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Services from "./components/Services";
-// import Tours from "./components/Tours";
+import HomePage from "./pages/HomePage";
+import AboutUs from "./pages/AboutUs";
+import BookList from "./pages/BookList";
+import Error from "./pages/Error";
+import SharedLayout from "./components/SharedLayout";
+
 
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Services/>
-      <BookList/>
-      <Footer/>
-    </div>
+    <BrowserRouter>
+    <Routes>
+
+      <Route path='/' element={<SharedLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path='about_us' element={<AboutUs />}/>
+        <Route path='books' element={<BookList />}/>
+        <Route path='*' element={<Error />}/>
+      </Route>
+
+      </Routes>
+    </BrowserRouter>
   )
 }
 

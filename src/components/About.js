@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import img from "../images/about.jpeg";
 
 const About = () => {
@@ -17,18 +18,17 @@ const About = () => {
         />
       </div>
       <article className="about-info">
-        <h3>explore the difference</h3>
+        <h3>audio book platform for kids!</h3>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
-          quisquam harum nam cumque temporibus explicabo dolorum sapiente odio
-          unde dolor?
+        We believe in the power of imagination and the importance of reading to children.
+        Our mission is to bring books to life through engaging and entertaining audio experiences.
         </p>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
-          quisquam harum nam cumque temporibus explicabo dolorum sapiente odio
-          unde dolor?
+        Our audio books are carefully selected and narrated by professional voice actors, ensuring that each story is brought to life in a fun and captivating way.
+        From classic fairy tales to modern day adventures, we have a wide range of stories to cater to children of all ages.
         </p>
-        <a href="#about" className="btn">read more</a>
+        {/* <a href="#about" className="btn">read more</a> */}
+        <Link to="/about" className="btn">read more</Link>
       </article>
     </div>
   </section>
