@@ -1,6 +1,6 @@
 import React from "react";
 import { pageLinks, socialLinks } from "../data";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import logo from "../images/logo.svg";
 
 const Navbar = () => {
@@ -21,7 +21,8 @@ const Navbar = () => {
           const {id, href, text} = link
           return (
             <li key={id}>
-              <Link to={href} className="nav-link" >{text}</Link>
+              <NavLink to={href}
+               className={({isActive}) => (isActive ? 'nav-link active' : 'nav-link')}>{text}</NavLink>
             </li>
           )
         })}

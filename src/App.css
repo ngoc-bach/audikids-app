@@ -468,6 +468,7 @@ Navbar
   display: flex;
   align-items: center;
 }
+
 .nav-icons {
   display: none;
 }
@@ -516,6 +517,10 @@ Navbar
 }
 .show-links {
   height: 280px;
+}
+
+.active {
+  background: var(--clr-primary-10)
 }
 /* nav at bigger screen size */
 @media screen and (min-width: 992px) {
