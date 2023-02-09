@@ -3,7 +3,7 @@ import Book from "../components/Book";
 
 const BookList = ({books}) => {
   return (
-    <section className="section featuredbooks" id="books">
+    <section className="section featuredbooks">
     <div className="section-title">
       <h2><span>Audi Kids Best Sellers</span></h2>
     </div>
@@ -19,4 +19,4 @@ const BookList = ({books}) => {
   )
 }
 
-export default BookList
+export default BookList;

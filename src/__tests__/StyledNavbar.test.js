@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Navbar from "../components/Navbar";
+import StyledNavbar from "../components/StyledNavbar";
 
 export const expectedSocialLinks = [
   {
@@ -20,9 +20,9 @@ export const expectedSocialLinks = [
   }
 ]
 
-describe("Navbar", () => {
+describe("StyledNavbar", () => {
   it("renders successfully", () => {
-    render(<Navbar />);
+    render(<StyledNavbar />);
 
     const logo = screen.getByAltText("backroads");
     const toggleButton = screen.getByRole("button");

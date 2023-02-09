@@ -3,6 +3,9 @@ import "./App.css";
 import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
 import BookList from "./pages/BookList";
+import SingleBook from "./pages/SingleBook";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 import Error from "./pages/Error";
 import SharedLayout from "./components/SharedLayout";
 import { useEffect, useState } from "react";
@@ -11,13 +14,14 @@ const url = 'http://demo3553789.mockable.io/'
 
 function App() {
   const [books, setBooks] = useState([])
+  const [user, setUser] = useState(null)
 
   const fetchBooks = async () => {
+
   const response = await fetch(url);
   const books = await response.json();
   setBooks(books);
 }
-
   useEffect(() => {
     fetchBooks();
   }, []);
@@ -30,6 +34,9 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path='about_us' element={<AboutUs />}/>
         <Route path='books' element={<BookList books={books}/>}/>
+        <Route path='books/:bookId' element={<SingleBook books={books}/>}/>
+        <Route path='login' element={<Login setUser={setUser}/>}/>
+        <Route path='dashboard' element={<Dashboard user={user}/>}/>
         <Route path='*' element={<Error />}/>
       </Route>
 
