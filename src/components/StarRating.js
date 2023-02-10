@@ -16,7 +16,7 @@ const StarRating = ({ rating }) => {
       stars.push(<FontAwesomeIcon key={i} icon={faStar} className="empty" />);
     }
   }
-  return <div className="star-rating">{stars}</div>;
+  return <span className="star-rating">{stars}</span>;
 };
 
 export default StarRating;

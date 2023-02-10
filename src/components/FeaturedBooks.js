@@ -1,8 +1,7 @@
 import React from "react";
-import { books } from "../data";
-import StarRating from "./StarRating";
+import Book from "./Book";
 
-const FeaturedBooks = () => {
+const FeaturedBooks = ({books}) => {
   return (
     <section className="section featuredbooks" id="books">
     <div className="section-title">
@@ -10,25 +9,9 @@ const FeaturedBooks = () => {
     </div>
 
     <div className="section-center featured-center">
-      {books.slice(0,6).map((book, index) => {
-        const {id, img, title, text, price, rating} = book
+      {books.slice(0,6).map((book) => {
         return (
-        <article key={id} className="book-card">
-          <div className="book-img-container">
-            <img src={img} className="book-img" alt="" />
-            <p className="book-date">{`#${index + 1}`}</p>
-          </div>
-          <div className="book-info">
-            <div className="book-title">
-              <h4>{title}</h4>
-            </div>
-            <p>{text}</p>
-            <div className="book-footer">
-              <StarRating rating={rating}/>
-              <p>${price}</p>
-            </div>
-          </div>
-        </article>
+          <Book book={book} key={book.id}/>
         )
       })}
     </div>

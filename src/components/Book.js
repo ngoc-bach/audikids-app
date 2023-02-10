@@ -8,7 +8,7 @@ const Book = ({book}) => {
     <Link to={`/books/${id}`}>
     <article className="book-card">
       <div className="book-img-container">
-        <img src={img} className="book-img" alt="" />
+        <img src={img} className="book-img" alt={title} />
         <p className="book-date">{`#${id}`}</p>
       </div>
       <div className="book-info">

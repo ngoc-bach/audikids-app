@@ -3,12 +3,12 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import FeaturedBooks from "../components/FeaturedBooks";
 
-const HomePage = () => {
+const HomePage = ({books}) => {
   return (
     <>
       <Hero/>
       <About/>
-      <FeaturedBooks/>
+      <FeaturedBooks books={books}/>
     </>
   )
 }

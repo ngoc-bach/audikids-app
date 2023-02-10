@@ -53,8 +53,6 @@ const StyledNavbar = () => {
         <Link to="/">
           <img
             src={logo}
-            width="30"
-            height="30"
             className="d-inline-block align-top"
             alt="React Bootstrap logo"
             />
@@ -67,10 +65,8 @@ const StyledNavbar = () => {
             {pageLinks.map((link) => {
               const {id, href, text} = link
               return (
-                <Nav.Link key={id} className='nav-link'>
-                  <NavLink to={href}
+                  <NavLink to={href} key={id}
                   className={({isActive}) => (isActive ? 'nav-link active' : 'nav-link')}>{text}</NavLink>
-                </Nav.Link>
               )
             })}
 
@@ -79,11 +75,9 @@ const StyledNavbar = () => {
           {socialLinks.map((link) => {
               const {id, href, icon} = link
               return(
-              <Nav.Link data-testid={id} key={id} href={href} className='nav-icon'>
-                {/* <a href={href} target="_blank" rel="noreferrer" className="nav-icon"
-                  ><i className={icon}></i></a> */}
-                <i className={icon}></i>
-              </Nav.Link>
+                <Nav.Link data-testid={id} key={id} href={href} className='nav-icon'>
+                  <i className={icon}></i>
+                </Nav.Link>
               )
             })}
         </Navbar.Collapse>

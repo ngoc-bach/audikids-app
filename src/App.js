@@ -31,7 +31,7 @@ function App() {
     <Routes>
 
       <Route path='/' element={<SharedLayout />}>
-        <Route index element={<HomePage />} />
+        <Route index element={<HomePage books={books}/>} />
         <Route path='about_us' element={<AboutUs />}/>
         <Route path='books' element={<BookList books={books}/>}/>
         <Route path='books/:bookId' element={<SingleBook books={books}/>}/>
