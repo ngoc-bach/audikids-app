@@ -10,8 +10,7 @@ import Error from "./pages/Error";
 import SharedLayout from "./components/SharedLayout";
 import { useEffect, useState } from "react";
 
-// const url = 'http://demo3553789.mockable.io/'
-const url = 'https://audikids-children-books.netlify.app/.netlify/functions/api/books';
+const url = process.env.REACT_APP_BASE_URL
 
 function App() {
   const [books, setBooks] = useState([])

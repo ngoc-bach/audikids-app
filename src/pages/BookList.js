@@ -10,9 +10,7 @@ const BookList = ({books}) => {
 
     <div className="section-center featured-center">
       {books.map((book) => {
-        return (
-          <Book book={book} key={book.id}/>
-        )
+        return (<Book book={book} key={book.id}/>)
       })}
     </div>
   </section>

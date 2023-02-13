@@ -33,7 +33,7 @@ Variables
   --clr-white: #fff;
   --ff-primary: 'Lato', sans-serif;
   --transition: all 0.3s linear;
-  --spacing: 0.25rem;
+  --spacing: 0.15rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -91,6 +91,9 @@ h3 {
 }
 h4 {
   font-size: 0.875rem;
+}
+h5 {
+  font-size: 0.85rem;
 }
 p {
   margin-bottom: 1.25rem;
@@ -340,7 +343,8 @@ Featured Books
 }
 .book-img {
   height: 18rem;
-  object-fit: cover;
+  object-fit: scale-down;
+  background-color: var(--clr-white);
 }
 .book-date {
   position: absolute;
@@ -362,6 +366,7 @@ Featured Books
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  color: var(--clr-primary-4);
 }
 .book-title p,
 .book-title h4 {
