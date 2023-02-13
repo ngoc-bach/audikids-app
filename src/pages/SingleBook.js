@@ -28,6 +28,9 @@ const SingleBook = ({books}) => {
               className="img-fluid rounded-start"
               alt={title}
               style={{margin: '1rem', width: '1000px', border: '1rem'}}/>
+          <audio controls>
+            <source src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' type="audio/mpeg" />
+          </audio>
         </div>
         <div className="col-md-8">
           <div className="card-body">

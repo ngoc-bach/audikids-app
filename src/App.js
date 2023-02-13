@@ -10,17 +10,21 @@ import Error from "./pages/Error";
 import SharedLayout from "./components/SharedLayout";
 import { useEffect, useState } from "react";
 
-const url = 'http://demo3553789.mockable.io/'
+// const url = 'http://demo3553789.mockable.io/'
+const url = 'https://audikids-children-books.netlify.app/.netlify/functions/api/books';
 
 function App() {
   const [books, setBooks] = useState([])
   const [user, setUser] = useState(null)
 
   const fetchBooks = async () => {
-
-  const response = await fetch(url);
-  const books = await response.json();
-  setBooks(books);
+    try {
+      const response = await fetch(url);
+      const books = await response.json();
+      setBooks(books);
+    } catch (error) {
+      console.log(error)
+    }
 }
   useEffect(() => {
     fetchBooks();
