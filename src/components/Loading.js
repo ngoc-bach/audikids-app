@@ -5,7 +5,7 @@ const Loading = () => {
     <section className="section">
       <h1 className="section-title"> Loading ....</h1>
     </section>
-  )
-}
+  );
+};
 
 export default Loading;

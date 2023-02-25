@@ -10,11 +10,11 @@ import Error from "./pages/Error";
 import SharedLayout from "./components/SharedLayout";
 import { useEffect, useState } from "react";
 
-const url = process.env.REACT_APP_BASE_URL
+const url = process.env.REACT_APP_BASE_URL;
 
 function App() {
-  const [books, setBooks] = useState([])
-  const [user, setUser] = useState(null)
+  const [books, setBooks] = useState([]);
+  const [user, setUser] = useState(null);
 
   const fetchBooks = async () => {
     try {
@@ -22,30 +22,28 @@ function App() {
       const books = await response.json();
       setBooks(books);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-}
+  };
   useEffect(() => {
     fetchBooks();
   }, []);
 
   return (
     <BrowserRouter>
-    <Routes>
-
-      <Route path='/' element={<SharedLayout />}>
-        <Route index element={<HomePage books={books}/>} />
-        <Route path='about_us' element={<AboutUs />}/>
-        <Route path='books' element={<BookList books={books}/>}/>
-        <Route path='books/:bookId' element={<SingleBook books={books}/>}/>
-        <Route path='login' element={<Login setUser={setUser}/>}/>
-        <Route path='dashboard' element={<Dashboard user={user}/>}/>
-        <Route path='*' element={<Error />}/>
-      </Route>
-
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<HomePage books={books} />} />
+          <Route path="about_us" element={<AboutUs />} />
+          <Route path="books" element={<BookList books={books} />} />
+          <Route path="books/:bookId" element={<SingleBook books={books} />} />
+          <Route path="login" element={<Login setUser={setUser} />} />
+          <Route path="dashboard" element={<Dashboard user={user} />} />
+          <Route path="*" element={<Error />} />
+        </Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;
