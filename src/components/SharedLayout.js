@@ -9,7 +9,7 @@ const SharedLayout = () => {
       <Outlet />
       <Footer />
     </>
-  )
-}
+  );
+};
 
 export default SharedLayout;
