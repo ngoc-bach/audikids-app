@@ -1,7 +1,11 @@
 import React from "react";
 import Book from "./Book";
+import { useGlobalContext } from "../context";
 
-const FeaturedBooks = ({ books }) => {
+const FeaturedBooks = () => {
+  const { books } = useGlobalContext();
+
+  const booksArray = Array.from(books.entries());
   return (
     <section className="section featuredbooks" id="books">
       <div className="section-title">
@@ -11,8 +15,9 @@ const FeaturedBooks = ({ books }) => {
       </div>
 
       <div className="section-center featured-center">
-        {books.slice(0, 6).map((book) => {
-          return <Book book={book} key={book.id} />;
+        {booksArray.slice(0, 6).map((bookArray) => {
+          const [id, book] = bookArray
+          return <Book key={id} book={book} />;
         })}
       </div>
     </section>

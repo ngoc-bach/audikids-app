@@ -8,37 +8,30 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Error from "./pages/Error";
 import SharedLayout from "./components/SharedLayout";
-import { useEffect, useState } from "react";
+import Loading from "./components/Loading";
+import CartContainer from "./components/CartContainer";
+import { useGlobalContext } from "./context";
 
-const url = process.env.REACT_APP_BASE_URL;
 
 function App() {
-  const [books, setBooks] = useState([]);
-  const [user, setUser] = useState(null);
+  // const [books, setBooks] = useState([]);
 
-  const fetchBooks = async () => {
-    try {
-      const response = await fetch(url);
-      const books = await response.json();
-      setBooks(books);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    fetchBooks();
-  }, []);
+  const { loading } = useGlobalContext();
+  if (loading) {
+    return <Loading />
+  }
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          <Route index element={<HomePage books={books} />} />
+          <Route index element={<HomePage />} />
           <Route path="about_us" element={<AboutUs />} />
-          <Route path="books" element={<BookList books={books} />} />
-          <Route path="books/:bookId" element={<SingleBook books={books} />} />
-          <Route path="login" element={<Login setUser={setUser} />} />
-          <Route path="dashboard" element={<Dashboard user={user} />} />
+          <Route path="books" element={<BookList />} />
+          <Route path="books/:bookId" element={<SingleBook />} />
+          <Route path="cart" element={<CartContainer />} />
+          <Route path="login" element={<Login />} />
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

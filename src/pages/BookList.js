@@ -1,21 +1,26 @@
 import React from "react";
 import Book from "../components/Book";
+import Row from 'react-bootstrap/Row';
+import { Container } from 'react-bootstrap';
+import { useGlobalContext } from "../context";
 
-const BookList = ({ books }) => {
+const BookList = () => {
+  const { books } = useGlobalContext();
+
+  const booksArray = Array.from(books.entries())
   return (
-    <section className="section featuredbooks">
-      <div className="section-title">
-        <h2>
-          <span>Audi Kids Best Sellers</span>
-        </h2>
-      </div>
-
-      <div className="section-center featured-center">
-        {books.map((book) => {
-          return <Book book={book} key={book.id} />;
-        })}
-      </div>
-    </section>
+    <Container>
+      <section className="section">
+        <h2>Audi Kids Best Sellers</h2>
+        <Row xs={1} md={2} xl={3} className="g-2">
+          {booksArray.map((bookArray) => {
+            const [id, book] = bookArray;
+            return <Book key={id} book={book} />;
+          })}
+        </Row>
+        {/* </div> */}
+      </section>
+    </Container>
   );
 };
 
