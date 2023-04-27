@@ -9,17 +9,14 @@ const BookList = () => {
 
   const booksArray = Array.from(books.entries())
   return (
-    <Container>
-      <section className="section">
-        <h2>Audi Kids Best Sellers</h2>
-        <Row xs={1} md={2} xl={3} className="g-2">
-          {booksArray.map((bookArray) => {
-            const [id, book] = bookArray;
-            return <Book key={id} book={book} />;
-          })}
-        </Row>
-        {/* </div> */}
-      </section>
+    <Container style={{ marginTop: "7rem", marginBottom: "7rem" }}>
+      <h2 style={{ marginBottom: "2rem" }}>Audi Kids Best Sellers</h2>
+      <Row xs={1} md={2} xl={3} className="g-0">
+        {booksArray.map((bookArray) => {
+          const [id, book] = bookArray;
+          return <Book key={id} book={book} />;
+        })}
+      </Row>
     </Container>
   );
 };

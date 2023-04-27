@@ -12,7 +12,7 @@ const Book = ({ book }) => {
     <>
       <Card
         className="book-card"
-        style={{ width: "22rem", margin: "1.5rem auto", border: "none" }}
+        style={{ width: "22rem", margin: "1rem auto", border: "none" }}
       >
         <Link to={`/books/${id}`}>
           <Card.Img className="book-img" variant="top" src={img} />
