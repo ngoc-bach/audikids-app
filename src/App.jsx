@@ -8,19 +8,9 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Error from "./pages/Error";
 import SharedLayout from "./components/SharedLayout";
-import Loading from "./components/Loading";
 import CartContainer from "./components/CartContainer";
-import { useGlobalContext } from "./context";
-
 
 function App() {
-  // const [books, setBooks] = useState([]);
-
-  const { loading } = useGlobalContext();
-  if (loading) {
-    return <Loading />
-  }
-
   return (
     <BrowserRouter>
       <Routes>
