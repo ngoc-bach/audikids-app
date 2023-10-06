@@ -2,6 +2,8 @@
 
 ![Project Logo](public/favicon.ico)
 
+https://github.com/ngoc-bach/audikids-app/assets/87818976/80da247d-c309-4fa5-a809-19bd7344221c
+
 ## Description
 This is a web application for providing children's audio books. The app is built using React and has been migrated from **Create-react-app** to **Vite** for enhanced performance and improved development experience.
 
